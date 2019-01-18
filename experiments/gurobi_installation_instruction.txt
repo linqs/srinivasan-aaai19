@@ -1,0 +1,18 @@
+These are the steps  that I took to get the gurobi python interface working on my machine:
+
+- Created an account in gurobi website as an academic researcher
+
+...
+...
+ Waited until my identity was verified by gurobi
+...
+...
+
+- Downloaded gurobi from this [link](http://www.gurobi.com/downloads/gurobi-optimizer).
+- Requested an academic license [here](https://user.gurobi.com/download/licenses/free-academic)
+- Got the license key using `grbgetkey` tool (available in license center)
+- added these lines to your `.bashrc` (or another startup file)
+	export GUROBI_HOME="/path/to/gurobi/installation"
+	export GRB_LICENSE_FILE="/path/to/gurobi.lic"
+- ran this line in gurobi installation directory
+	$ python setup.py install --user
